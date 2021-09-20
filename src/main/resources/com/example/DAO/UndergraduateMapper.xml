@@ -4,36 +4,28 @@
 
     <select id="selectUndergraduateById" resultType="com.example.POJO.Undergraduate">
         select *
-        from Undergraduate
+        from undergraduate
         where studentId = #{studentId}
     </select>
 
     <insert id="addUndergraduate" parameterType="com.example.POJO.Undergraduate">
-        INSERT INTO Undergraduate(name,birthDay,gender,grade,teacher)
-        VALUES (#{name},
-                #{birthDay},
-                #{gender},
-                #{grade},
+        INSERT INTO undergraduate(studentId,class_name,class_teacher)
+        VALUES (#{studentId},
+                #{className},
                 #{teacher})
     </insert>
 
     <update id="updateUndergraduate" parameterType="com.example.POJO.Undergraduate">
-        update Undergraduate
+        update undergraduate
         <set >
-            <if test="name != null" >
-                name = #{name,jdbcType=VARCHAR},
+            <if test="studentId != null" >
+                studentId = #{studentId},
             </if>
-            <if test="birthDay != null" >
-                birthDay = #{birthDay,jdbcType=DATE},
-            </if>
-            <if test="gender != null" >
-                gender = #{gender,jdbcType=VARCHAR},
-            </if>
-            <if test="grade != null" >
-                grade = #{grade},
+            <if test="className != null" >
+                class_name = #{className},
             </if>
             <if test="teacher != null" >
-                teacher = #{teacher},
+                class_teacher = #{teacher},
             </if>
         </set>
         where studentId = #{studentId,jdbcType=INTEGER}

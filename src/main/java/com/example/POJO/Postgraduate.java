@@ -7,6 +7,10 @@ package com.example.POJO;
  */
 public class Postgraduate extends Student{
     /**
+     * 学生ID
+     */
+    private Integer studentId;
+    /**
      * 导师
      */
     private String tutor;
@@ -18,10 +22,12 @@ public class Postgraduate extends Student{
     @Override
     public String toString() {
         return "Postgraduate{" +
-                "studentId=" + super.getStudentId() +
+                "studentId=" + studentId +
                 ", name='" + super.getName() + '\'' +
-                ", birthDay=" + super.getBirthDay() +
+                ", birthDay=" + super.getBirthday() +
                 ", gender='" + super.getGender() + '\'' +
+                ", grade='" + super.getGrade() + '\'' +
+                ", major='" + super.getMajor() + '\'' +
                 ", tutor='" + tutor + '\'' +
                 ", research='" + research + '\'' +
                 '}';

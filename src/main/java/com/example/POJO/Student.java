@@ -8,7 +8,7 @@ import java.sql.Date;
  * @version 1.0
  * @since 2021/9/18 6:18 下午
  */
-public abstract class Student {
+public class Student {
     /**
      * 学生ID
      */
@@ -20,11 +20,36 @@ public abstract class Student {
     /**
      * 学生生日
      */
-    private Date birthDay;
+    private Date birthday;
     /**
      * 学生性别
      */
     private String gender;
+    /**
+     * 学生年级
+     */
+    private String grade;
+    /**
+     * 学生专业
+     */
+    private String major;
+    /**
+     * 1 代表本科生  2 代表研究生
+     */
+    private int typeNum;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", name='" + name + '\'' +
+                ", birthday=" + birthday +
+                ", gender='" + gender + '\'' +
+                ", grade='" + grade + '\'' +
+                ", major='" + major + '\'' +
+                ", typeNum=" + typeNum +
+                '}';
+    }
 
     public Integer getStudentId() {
         return studentId;
@@ -42,12 +67,12 @@ public abstract class Student {
         this.name = name;
     }
 
-    public Date getBirthDay() {
-        return birthDay;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setBirthDay(Date birthDay) {
-        this.birthDay = birthDay;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public String getGender() {
@@ -56,5 +81,29 @@ public abstract class Student {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public int getTypeNum() {
+        return typeNum;
+    }
+
+    public void setTypeNum(int typeNum) {
+        this.typeNum = typeNum;
     }
 }

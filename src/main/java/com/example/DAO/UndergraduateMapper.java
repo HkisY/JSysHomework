@@ -1,12 +1,15 @@
 package com.example.DAO;
 
 import com.example.POJO.Undergraduate;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Hxin
  * @version 1.0
  * @since 2021/9/18 6:44 下午
  */
+@Component
 public interface UndergraduateMapper {
 
     /**

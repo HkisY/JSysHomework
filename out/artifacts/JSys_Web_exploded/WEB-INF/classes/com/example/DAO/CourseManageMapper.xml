@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.DAO.CourseManageMapper">
+
+    <select id="selectCourseByCourseId" resultType="com.example.POJO.Course">
+        select *
+        from Course
+        where courseId = #{courseId}
+    </select>
+
+    <insert id="addCourse" parameterType="com.example.POJO.Course">
+        INSERT INTO Course(course_name, description, score, teacher)
+        VALUES (#{courseName},
+                #{description},
+                #{score},
+                #{teacher})
+    </insert>
+
+    <update id="updateCourseByCourseId" parameterType="com.example.POJO.Course">
+        update Course
+        <set>
+            <if test="courseName != null">
+                course_name = #{courseName,jdbcType=VARCHAR},
+            </if>
+            <if test="score != null">
+                score = #{score},
+            </if>
+            <if test="teacher != null">
+                teacher = #{teacher},
+            </if>
+            <if test="description != null">
+                description = #{description},
+            </if>
+        </set>
+        where courseId = #{courseId,jdbcType=INTEGER}
+    </update>
+</mapper>

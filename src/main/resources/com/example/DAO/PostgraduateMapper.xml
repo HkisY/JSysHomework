@@ -3,30 +3,22 @@
 <mapper namespace="com.example.DAO.PostgraduateMapper">
     <select id="selectPostgraduateById" resultType="com.example.POJO.Postgraduate">
         select *
-        from Postgraduate
+        from postgraduate
         where studentId = #{studentId}
     </select>
 
     <insert id="addPostgraduate" parameterType="com.example.POJO.Postgraduate">
-        INSERT INTO Postgraduate(name, birthDay, gender, tutor, research)
-        VALUES (#{name},
-                #{birthDay},
-                #{gender},
+        INSERT INTO postgraduate(studentId, tutor, research)
+        VALUES (#{studentId},
                 #{tutor},
                 #{research})
     </insert>
 
     <update id="updatePostgraduate" parameterType="com.example.POJO.Postgraduate">
-        update Postgraduate
+        update postgraduate
         <set>
-            <if test="name != null">
-                name = #{name,jdbcType=VARCHAR},
-            </if>
-            <if test="birthDay != null">
-                birthDay = #{birthDay,jdbcType=DATE},
-            </if>
-            <if test="gender != null">
-                gender = #{gender,jdbcType=VARCHAR},
+            <if test="studentId != null">
+                name = #{studentId},
             </if>
             <if test="tutor != null">
                 tutor = #{tutor},

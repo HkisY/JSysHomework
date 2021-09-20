@@ -2,12 +2,15 @@ package com.example.DAO;
 
 import com.example.POJO.Postgraduate;
 import com.example.POJO.Undergraduate;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Hxin
  * @version 1.0
  * @since 2021/9/18 10:19 下午
  */
+@Component
 public interface PostgraduateMapper {
     /**
      * 根据学生ID查询学生信息，并展示

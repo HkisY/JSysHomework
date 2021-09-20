@@ -7,9 +7,13 @@ package com.example.POJO;
  */
 public class Undergraduate extends Student {
     /**
+     * 学生Id
+     */
+    private Integer studentId;
+    /**
      * 学生班级
      */
-    private String grade;
+    private String className;
     /**
      * 学生班主任
      */
@@ -20,19 +24,31 @@ public class Undergraduate extends Student {
         return "Undergraduate{" +
                 "studentId=" + super.getStudentId() +
                 ", name='" + super.getName() + '\'' +
-                ", birthDay=" + super.getBirthDay() +
+                ", birthDay=" + super.getBirthday() +
                 ", gender='" + super.getGender() + '\'' +
-                ", grade='" + grade + '\'' +
+                ", grade='" + super.getGrade() + '\'' +
+                ", className='" + className + '\'' +
+                ", major='" + super.getMajor() + '\'' +
                 ", teacher='" + teacher + '\'' +
                 '}';
     }
 
-    public String getGrade() {
-        return grade;
+    @Override
+    public Integer getStudentId() {
+        return studentId;
     }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
+    @Override
+    public void setStudentId(Integer studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
     }
 
     public String getTeacher() {

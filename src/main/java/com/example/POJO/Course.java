@@ -9,7 +9,7 @@ public class Course {
     /**
      * 课程Id
      */
-    private Integer courseId;
+    private Integer courseNum;
     /**
      * 课程名字
      */
@@ -25,25 +25,25 @@ public class Course {
     /**
      * 课程任课老师
      */
-    private Teacher teacher;
+    private String teacher;
 
     @Override
     public String toString() {
         return "Course{" +
-                "courseId=" + courseId +
+                "courseNum=" + courseNum +
                 ", courseName='" + courseName + '\'' +
                 ", description='" + description + '\'' +
                 ", score=" + score +
-                ", teacher=" + teacher +
+                ", teacher='" + teacher + '\'' +
                 '}';
     }
 
-    public Integer getCourseId() {
-        return courseId;
+    public Integer getCourseNum() {
+        return courseNum;
     }
 
-    public void setCourseId(Integer courseId) {
-        this.courseId = courseId;
+    public void setCourseNum(Integer courseNum) {
+        this.courseNum = courseNum;
     }
 
     public String getCourseName() {
@@ -70,11 +70,11 @@ public class Course {
         this.score = score;
     }
 
-    public Teacher getTeacher() {
+    public String getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(Teacher teacher) {
+    public void setTeacher(String teacher) {
         this.teacher = teacher;
     }
 }
