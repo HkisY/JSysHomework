@@ -36,6 +36,8 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.5" />
+          <element id="library" level="project" name="jstl" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:5.3.9" />
         </element>
       </element>
     </root>

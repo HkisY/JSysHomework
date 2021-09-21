@@ -28,14 +28,36 @@ public class CourseController {
         model.addAttribute("list",list);
         return "allCourse";
     }
+
     @RequestMapping("/toAddPage")
     public String toAddPage(){
         return "addCourse";
     }
+
     @RequestMapping("/addCourse")
     public String addCourse(Course course){
         //加判断
         courseService.addCourse(course);
+        return "redirect:/course/allCourse";
+    }
+
+    @RequestMapping("/toUpdatePage")
+    public String toUpdatePage(){
+        return "updatePage";
+    }
+
+    @RequestMapping("/updateCourse")
+    public String updateCourse(Course course){
+        if (course.getCourseNum() == 0){
+            //增加警报内容
+            return "redirect:/course/updateCourse";
+        }
+        courseService.updateCourseByCourseId(course,course.getCourseNum());
+        return "redirect:/course/allCourse";
+    }
+
+    @RequestMapping("/cancel")
+    public String cancel(){
         return "redirect:/course/allCourse";
     }
 }

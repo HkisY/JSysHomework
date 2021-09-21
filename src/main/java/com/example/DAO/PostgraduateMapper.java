@@ -5,6 +5,8 @@ import com.example.POJO.Undergraduate;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * @author Hxin
  * @version 1.0
@@ -12,6 +14,11 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public interface PostgraduateMapper {
+    /**
+     * 查询全部研究生
+     * @return list
+     */
+    List<Postgraduate> selectAllPostgraduate();
     /**
      * 根据学生ID查询学生信息，并展示
      * @param studentId 学生Id

@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.DAO.UndergraduateMapper">
 
+    <select id="selectAllUndergraduate" resultType="com.example.POJO.Undergraduate">
+        select * from student
+        inner join  undergraduate on student.studentId = undergraduate.studentId
+    </select>
+
     <select id="selectUndergraduateById" resultType="com.example.POJO.Undergraduate">
         select *
         from undergraduate

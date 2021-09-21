@@ -28,7 +28,7 @@ public class UserLoginController {
         if (user.getPassword().equals(password)){
             return "redirect:/course/allCourse";
         }
-        return null;
+        return "Welcome";
     }
     @RequestMapping("registerPage")
     public String jumpRegister(){

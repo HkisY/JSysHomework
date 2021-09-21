@@ -14,6 +14,13 @@
     </properties>
 
     <dependencies>
+
+        <!-- spring-test 包 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.3.9</version>
+        </dependency>
         <!--Json-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

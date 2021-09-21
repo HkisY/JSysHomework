@@ -14,10 +14,15 @@ import java.util.List;
  */
 public interface IStudentService {
     /**
-     * 展示所有学生
-     * @return Student List
+     * 展示所有研究生
+     * @return Postgraduate List
      */
-    List<Student> findAllStudent();
+    List<Postgraduate> findAllPostgraduate();
+    /**
+     * 展示所有本科生
+     * @return Postgraduate List
+     */
+    List<Undergraduate> findAllUndergraduate();
     /**
      * 添加学生信息
      * @param undergraduate undergraduate POJO

@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: hkisy
-  Date: 2021/9/20
-  Time: 2:52 下午
+  Date: 2021/9/21
+  Time: 4:08 下午
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>课程展示页面</title>
+    <title>Title</title>
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -16,40 +16,32 @@
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <h4>将就看吧，我是前端废物之选课系统</h4>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    <small>用户登录</small>
+                    <small>选课</small>
                 </h1>
             </div>
         </div>
     </div>
-    <form id="login" action="/welcome/login">
+    <form id="selectCourse" action="/chose/selectCourse">
         <div class="form-group">
-            <label>username：</label>
-            <input type="text" name="username" class="form-control">
+            <label>学生编号：</label>
+            <input type="text" name="studentId" class="form-control">
         </div>
         <div class="form-group">
-            <label>password：</label>
-            <input type="password" name="password" class="form-control">
+            <label>课程编号：</label>
+            <input type="text" name="courseId" class="form-control">
         </div>
         <br>
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="login">
+            <input type="submit" class="btn btn-primary" value="确认">
         </div>
     </form>
-    <form id="register" action="/welcome/registerPage">
+    <form id="cancel" action="/chose/cancel">
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="register">
+            <input type="submit" class="btn btn-primary" value="cancel">
         </div>
     </form>
 </div>
-
 </body>
 </html>

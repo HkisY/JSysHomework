@@ -25,8 +25,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 column">
+                <div class="col-md-2 column">
                     <a class="btn btn-primary" href="${pageContext.request.contextPath}/course/toAddPage">新增课程</a>
+                </div>
+                <div class="col-md-2 column">
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/course/toUpdatePage">修改课程</a>
+                </div>
+                <div class="col-md-1 column">
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/student/toAddUnder">新增本科生</a>
+                </div>
+                <div class="col-md-1 column">
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/student/toAddPost">新增研究生</a>
+                </div>
+                <div class="col-md-2 column">
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/student/toUpdatePage">修改学生信息</a>
+                </div>
+                <div class="col-md-2 column">
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/student/toSelectPage">查询学生</a>
+                </div>
+                <div class="col-md-2 column">
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/chose/toSelectCoursePage">选课</a>
                 </div>
             </div>
             <br>

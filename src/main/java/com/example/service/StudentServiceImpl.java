@@ -31,14 +31,20 @@ public class StudentServiceImpl implements IStudentService {
 
 
     @Override
-    public List<Student> findAllStudent() {
-        return studentMapper.selectAllStudent();
+    public List<Postgraduate> findAllPostgraduate() {
+        return postgraduateMapper.selectAllPostgraduate();
+    }
+
+    @Override
+    public List<Undergraduate> findAllUndergraduate() {
+        return undergraduateMapper.selectAllUndergraduate();
     }
 
     @Override
     public int addStudent(Undergraduate undergraduate) {
-        int a =  undergraduateMapper.addUndergraduate(undergraduate);
+        //加入事务操作
         int b =  studentMapper.addStudent(undergraduate);
+        int a =  undergraduateMapper.addUndergraduate(undergraduate);
         if (a==1&&b==1){
             return 1;
         }
@@ -47,8 +53,8 @@ public class StudentServiceImpl implements IStudentService {
 
     @Override
     public int addStudent(Postgraduate postgraduate) {
-        int a =  postgraduateMapper.addPostgraduate(postgraduate);
         int b =  studentMapper.addStudent(postgraduate);
+        int a =  postgraduateMapper.addPostgraduate(postgraduate);
         if (a==1&&b==1){
             return 1;
         }
